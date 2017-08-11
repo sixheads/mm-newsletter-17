@@ -1,0 +1,107 @@
+// Base styles for rest of site
+
+// Text Container - 3 col
+
+.text__col--basic {
+  @include bp(md) {
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+  }
+}
+.text__col,
+.text__col--basic,
+.text__col--2-img {
+  img {
+    margin-bottom: $spacer;
+  }
+}
+.text--grid {
+  .text__col {
+    @include span(12);
+    @include bp(md) {
+      @include span(4);
+    }
+  }
+  .text__col--2 {
+    @include span(12);
+    @include bp(md) {
+      @include span(8);
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      -moz-column-gap: 2em;
+      -webkit-column-gap: 2em;
+      column-gap: 2em;
+    }
+  }
+  .text__col--2-img {
+    @include span(12);
+    @include bp(md) {
+      @include span(8);
+    }
+  }
+}
+
+// Hero Panel - single image + caption
+.hero {}
+.hero__caption {
+  position: absolute;
+  color: $white;
+  font-style: italic;
+  margin: 0;
+}
+.hero__caption--tl {
+  // top left
+  top: 20px;
+  left: 20px;
+}
+.hero__caption--tr {
+  // top right
+  top: 20px;
+  right: 20px;
+}
+.hero__caption--bl {
+  // bottom left
+  bottom: 20px;
+  left: 20px;
+}
+.hero__caption--br {
+  // bottom right
+  bottom: 20px;
+  right: 20px;
+}
+
+.hero__blurb-social {
+  padding: 20px;
+  @include bp(md) {
+    @include span(6);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    p {
+      color: $white;
+      @include font-size(20);
+    }
+  }
+  @include bp(lg) {
+    @include span(4);
+    top: 40px;
+    right: 40px;
+    p {
+      @include font-size(22);
+    }
+  }
+}
+
+
+// Images
+.winery-award {
+  float: left;
+  width: 180px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}

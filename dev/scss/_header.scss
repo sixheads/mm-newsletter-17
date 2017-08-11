@@ -1,0 +1,62 @@
+// Welcome
+.welcome {
+  background-color: $bronze;
+  height: 13em;
+  @include bp(md) {
+    height: 25em;
+    line-height: 28em;
+  }
+  @include bp(lg) {
+    height: 35em;
+  }
+  text-align: center;
+  
+  .welcome__year {
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    line-height: normal;
+    font-family: $font__display;
+    color: $black;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    @include bp(md) {
+      font-size: 1.1em;
+    }
+  }
+  .welcome__subtitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    color: $black;
+    font-size: 0.8em;
+    @include bp(md) {
+      font-size: 1.1em;
+    }
+  }
+  .est-marque {
+    position: absolute;
+    width: 75px;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 15px;
+    @include bp(md) {
+      width: 100px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.logo {
+  @include vertical-align-center;
+  width: 250px;
+  @include bp(md) {
+    width: 350px;
+  }
+}

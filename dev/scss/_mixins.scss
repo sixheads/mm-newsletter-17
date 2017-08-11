@@ -1,0 +1,97 @@
+// --- MIXINS ---
+
+// MEDIA QUERIES
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+@mixin bp($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+
+// Typo sizes
+// Rem output with px fallback
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue * 1px;
+  font-size: ($sizeValue / 16) * 1rem;
+}
+
+// Layout Mixins
+@mixin container {
+  max-width: $size__site-width;
+  margin-left: auto;
+  margin-right: auto; 
+  overflow: hidden;
+}
+
+@mixin span($colNumber) {
+  width: (100 / 12) * $colNumber * 1%;
+  float: left;
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+@mixin gallery($gridNumber) {
+  width: (100 / $gridNumber) * 1%;
+  float: left;
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+
+// Examples
+
+// .test--container {
+//   @include container;
+// }
+
+// .test--span {
+//   outline: 1px dotted blue;
+//   @include span(6);
+//   @include bp(md) {
+//     @include span(4);
+//   }
+// }
+
+// .test--gallery {
+//   margin-bottom: $spacer*2;
+//   @include gallery(3);
+//   &:nth-child(3n+1) {
+//     clear: left; 
+//   }
+//   @include bp(md) {
+//     @include gallery(4);
+//     &:nth-child(3n+1) {
+//       clear: none;
+//     }
+//     &:nth-child(4n+1) {
+//       clear: left;
+//     }
+//   }
+// }
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// vertically centre content
+@mixin vertical-align-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+// usage: @include vertical-align-center;

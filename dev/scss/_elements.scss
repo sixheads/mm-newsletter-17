@@ -1,0 +1,40 @@
+// --- BASIC ELEMENTS ---
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+body {
+  background: $color__background;
+}
+
+// Remove list formating for nav elements
+nav {
+  ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// --- IMAGES ---
+img {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}

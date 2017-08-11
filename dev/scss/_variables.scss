@@ -1,0 +1,30 @@
+// --- VARIABLES ---
+
+// Typography
+$font__main: "Whitney A", "Whitney B";
+$font__display: "MrsEaves";
+$font__line-height: 1.4;
+$font--bold: bold;
+$font--italic: italic;
+
+// MM Colour
+$white: #fff;
+$black: #000;
+$off-white: rgb(237, 238, 238);
+$dark-gray: rgb(88, 89, 91);
+$light-gray: rgb(160, 163, 165);
+$faded-gray: rgb(158, 158, 145);
+$bronze: rgb(180, 143, 123);
+
+
+$color__text: #444;
+$color__background: $white;
+$color__link: $light-gray;
+$color__link--visited: $light-gray;
+$color__link--hover: $dark-gray;
+
+// Spacing
+$size__site-width: auto;
+$spacer: 1rem;
+$corner: 0px;
+$border: 1px solid $black;
