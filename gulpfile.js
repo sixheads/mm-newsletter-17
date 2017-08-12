@@ -80,16 +80,8 @@ gulp.task('svg', function () {
 
 // Javascript Tools
 gulp.task('scripts', function() {  
-    return gulp.src(['dev/js/plugins.js', 'dev/js/my-scripts.js'])
+    return gulp.src(['dev/js/plugins.js', 'dev/js/main.js'])
         .pipe(concat('main.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest( 'dist/js/' ));
-});
-
-// JS Build
-gulp.task('jsBuild', function() {  
-    return gulp.src(['dev/js/plugins.js', 'dev/js/my-scripts.js'])
-        .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest( 'dist/js/' ));
 });

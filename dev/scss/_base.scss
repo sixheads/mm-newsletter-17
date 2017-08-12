@@ -1,7 +1,59 @@
 // Base styles for rest of site
 
-// Text Container - 3 col
+// Background colour variation on certain panels
+#team,
+#picnic,
+#weather, #weather--graphs,
+#years-release,
+#vintage-report,
+#celebrating {
+  background-color: $off-white;
+}
 
+// Navigation
+.navigation {
+  background-color: $dark-gray;
+  display: none;
+  @include bp(md) {
+    display: block;
+  }
+}
+.mm-site-link {
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+    }
+  }
+}
+.nav-menu {
+  h3 {
+    margin-top: 0;
+    color: $light-gray;
+    font-family: $font__main;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font__display;
+    color: $white;
+    @include font-size(18);
+    &:hover,
+    &:focus,
+    &:active {
+      color: $light-gray;
+    }
+  }
+}
+
+// Text Container - 3 col
 .text__col--basic {
   @include bp(md) {
     -webkit-columns: 3;
@@ -51,7 +103,18 @@
     }
   }
 }
-
+.text__col,
+.text__col--basic,
+.text__col--2-img,
+.text__col--half {
+  margin-bottom: $spacer*1.5;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include bp(md) {
+    margin-bottom: 0;
+  }
+}
 // Hero Panel - single image + caption
 .hero {}
 .hero__caption {
@@ -83,11 +146,13 @@
 
 .hero__blurb-social {
   padding: 20px;
+  background-color: $off-white;
   @include bp(md) {
     @include span(6);
     position: absolute;
     top: 20px;
     right: 20px;
+    background-color: transparent;
     p {
       color: $white;
       @include font-size(20);
@@ -114,4 +179,70 @@
 
 .vintage-bottle-img {
   max-width: 320px;
+}
+
+
+
+// Footer Section
+.action-buttons {
+  padding: 20px;
+}
+
+a.action-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: $dark-gray;
+  padding: $spacer*2;
+  margin-bottom: $spacer;
+  @include bp(md) {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 0;
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+  @include bp(lg) {
+    padding: $spacer*2.5;
+  }
+  &:visited {
+    background-color: $dark-gray;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-gray;
+    background-color: $light-gray;
+  }
+}
+
+.footer {
+  background-color: $bronze;
+  padding: 50px 20px;
+  @include bp(md) {
+    padding: 140px 20px 30px;
+  }
+}
+
+.footer__est {
+  width: 130px;
+  position: relative;
+  left: -10px;
+  margin-bottom: $spacer*1.5;
+  @include bp(md) {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+.footer__contact {
+  @include bp(md) {
+    float: right;
+    margin-right: 50px;
+  }
+  @include bp(lg) {
+    margin-right: 85px;
+  }
 }

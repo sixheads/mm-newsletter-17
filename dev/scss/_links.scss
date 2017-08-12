@@ -1,7 +1,9 @@
-// --- LINKS & NAVIGATION ---
+// --- LINKS ---
 
 a {
     color: $color__link;
+      -webkit-transition: all 0.3s ease-out; 
+          transition: all 0.3s ease-out;
     
     &:visited {
         color: $color__link--visited;
