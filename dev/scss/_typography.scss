@@ -99,3 +99,20 @@ dfn, cite, em, i {
   position: relative;
   top: -8px;
 }
+
+.footer__contact {
+  p {
+    margin-bottom: 0;
+    color: $white;
+    @include font-size(14);
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $light-gray;
+    }
+  }
+}
