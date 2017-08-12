@@ -79,6 +79,11 @@ dfn, cite, em, i {
 .image-caption {
   color: $light-gray;
 }
+.vintage-caption {
+  color: $light-gray;
+  @include font-size(14);
+  text-transform: uppercase;
+}
 .pullquote {
   color: $bronze;
   @include font-size(22);
