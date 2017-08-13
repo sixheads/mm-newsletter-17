@@ -10,4 +10,5 @@ npm install gulp gulp-util gulp-sass gulp-sourcemaps gulp-plumber gulp-autoprefi
 ### Gulp Tasks ###
 
 'gulp watch' runs a normal watch task and automatic reload via browsersync
+
 'gulp sassBuild' runs a minify task on the SCSS (JS is concatenated and minified automatically in the watch task)
