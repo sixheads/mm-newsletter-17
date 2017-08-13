@@ -8,6 +8,7 @@ select,
 textarea {
   color: $color__text;
   font-family: $font__main;
+  font-weight: normal;
   @include font-size(16);
   line-height: $font__line-height;
 }

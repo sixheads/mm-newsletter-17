@@ -116,7 +116,11 @@
   }
 }
 // Hero Panel - single image + caption
-.hero {}
+.hero {
+  img {
+    width: 100%;
+  }
+}
 .hero__caption {
   position: absolute;
   color: $white;
